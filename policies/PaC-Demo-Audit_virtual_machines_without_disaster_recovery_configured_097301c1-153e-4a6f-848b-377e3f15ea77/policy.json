@@ -1,0 +1,38 @@
+{
+ "properties": {
+  "displayName": "PaC-Demo-Audit virtual machines without disaster recovery configured",
+  "policyType": "Custom",
+  "mode": "All",
+  "description": "Audit virtual machines which do not have disaster recovery configured. To learn more about disaster recovery, visit https://aka.ms/asr-doc.",
+  "metadata": {
+   "category": "Compute",
+   "createdBy": "efd13c42-0e5f-4da8-a85b-4f2c1284b494",
+   "createdOn": "2022-06-08T22:06:04.2093659Z",
+   "updatedBy": "efd13c42-0e5f-4da8-a85b-4f2c1284b494",
+   "updatedOn": "2022-06-08T22:06:52.781237Z"
+  },
+  "parameters": {},
+  "policyRule": {
+   "if": {
+    "field": "type",
+    "in": [
+     "Microsoft.Compute/virtualMachines",
+     "Microsoft.ClassicCompute/virtualMachines"
+    ]
+   },
+   "then": {
+    "effect": "auditIfNotExists",
+    "details": {
+     "type": "Microsoft.Resources/links",
+     "existenceCondition": {
+      "field": "name",
+      "like": "ASR-Protect-*"
+     }
+    }
+   }
+  }
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/eslz-sandboxes/providers/Microsoft.Authorization/policyDefinitions/097301c1-153e-4a6f-848b-377e3f15ea77",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "097301c1-153e-4a6f-848b-377e3f15ea77"
+}
