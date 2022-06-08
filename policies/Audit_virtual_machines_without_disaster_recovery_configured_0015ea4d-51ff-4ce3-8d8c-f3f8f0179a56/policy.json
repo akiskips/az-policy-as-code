@@ -5,7 +5,7 @@
   "mode": "All",
   "description": "Audit virtual machines which do not have disaster recovery configured. To learn more about disaster recovery, visit https://aka.ms/asr-doc.",
   "metadata": {
-   "version": "1.0.0",
+   "version": "2.0.0",
    "category": "Compute"
   },
   "parameters": {},
