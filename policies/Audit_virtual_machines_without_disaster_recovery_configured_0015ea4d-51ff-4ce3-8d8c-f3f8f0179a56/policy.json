@@ -18,7 +18,7 @@
     ]
    },
    "then": {
-    "effect": "deny",
+    "effect": "auditIfNotExists",
     "details": {
      "type": "Microsoft.Resources/links",
      "existenceCondition": {
